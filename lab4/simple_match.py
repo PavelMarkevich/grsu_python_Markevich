@@ -6,27 +6,26 @@
 # + ab
 # - b
 # - ba
-REGEXP_1 = ''
+REGEXP_1 = '^a'
 
 # + aab
 # + abb
 # + acb
 # - ab
 # - aabc
-REGEXP_2 = ''
+REGEXP_2 = 'a+[a-c]b+$'
 
 # + sofia.mp3
 # + sofia.mp4
 # - sofia.mp7
 # - sofia.mp34
-REGEXP_3 = r''
-
+REGEXP_3 = r'^sofia.mp[34]$'
 # + taverna
 # + versus
 # + vera
 # + zveri
 # - zver
-REGEXP_4 = ''
+REGEXP_4 = '[asi]$'
 
 # - a
 # - aa
@@ -37,7 +36,7 @@ REGEXP_4 = ''
 # + bbb
 # - bbbb
 # - ccc
-REGEXP_5 = ''
+REGEXP_5 = '^[ab]{3}$'
 
 # - Ok
 # - OkOk
@@ -47,7 +46,7 @@ REGEXP_5 = ''
 # - abab
 # + ababab
 # - abababab
-REGEXP_6 = ''
+REGEXP_6 = '(Ok|ab){3}$'
 
 # - aaa
 # - aaa aaa
@@ -56,7 +55,7 @@ REGEXP_6 = ''
 # + Aaa aaa aaa
 # - A
 # - aaa A aaa
-REGEXP_7 = r''
+REGEXP_7 = r'([aA]{3} *){3}'
 
 # + abc
 # + abc03
@@ -65,4 +64,4 @@ REGEXP_7 = r''
 # - Aabc
 # - abc1
 # - #abc
-REGEXP_8 = r''
+REGEXP_8 = r'a[bc/./-]*[03]*$'
